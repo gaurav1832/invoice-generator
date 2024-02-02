@@ -12,7 +12,8 @@ type ProductType = {
   total: number;
 };
 
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://invoice-generator-server-rv88.onrender.com";
+
 const userEmail = localStorage.getItem("userEmail");
 
 const AddProductForm: React.FC = () => {
@@ -39,7 +40,7 @@ const AddProductForm: React.FC = () => {
     event.preventDefault();
 
     // Prepare the URL for your API endpoint
-    const apiUrl = "http://localhost:5000/products/add"; // Adjust the URL/port as necessary
+    const apiUrl = `${API_BASE_URL}/products/add`; // Adjust the URL/port as necessary
 
     try {
       // Make an API call to add the product
@@ -238,14 +239,14 @@ const AddProductForm: React.FC = () => {
                 <td className="py-6 px-8"></td>
                 <td className="py-6 px-8"></td>
                 <td className="py-6 px-3 font-bold text-md text-right text-gray-700 relative">
-                  <hr className="w-full border-t py-4 border-gray-300" />
+                  <hr className="w-full border-t mb-8 border-gray-300" />
                   Grand Total
-                  <hr className="w-full border-t py-4 border-gray-300" />
+                  <hr className="w-full border-t mt-8 border-gray-300" />
                 </td>
                 <td className="py-6 px-3 font-bold text-md text-right text-blue-700 relative">
-                  <hr className="flex w-full border-t p-4 border-gray-300" />
+                  <hr className="flex w-full border-t mb-8 border-gray-300" />
                   INR {totalWithGST.toLocaleString()}
-                  <hr className="flex w-full border-t p-4 border-gray-300" />
+                  <hr className="flex w-full border-t mt-8 border-gray-300" />
                 </td>
               </tr>
             </tbody>

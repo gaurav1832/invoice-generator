@@ -9,7 +9,7 @@ type ProductType = {
   total: number;
 };
 
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://invoice-generator-server-rv88.onrender.com";
 const userEmail = localStorage.getItem("userEmail");
 
 const GeneratePDF = () => {
@@ -144,14 +144,14 @@ const GeneratePDF = () => {
                 <td className="py-6 px-8"></td>
                 <td className="py-6 px-8"></td>
                 <td className="py-6 px-3 font-bold text-md text-right text-gray-700 relative">
-                  <hr className="w-full border-t py-4 border-gray-300" />
+                  <hr className="w-full border-t mb-8 border-gray-300" />
                   Grand Total
-                  <hr className="w-full border-t py-4 border-gray-300" />
+                  <hr className="w-full border-t mt-8 border-gray-300" />
                 </td>
                 <td className="py-6 px-3 font-bold text-md text-right text-blue-700 relative">
-                  <hr className="flex w-full border-t p-4 border-gray-300" />
+                  <hr className="flex w-full border-t mb-8 border-gray-300" />
                   INR {totalWithGST.toLocaleString()}
-                  <hr className="flex w-full border-t p-4 border-gray-300" />
+                  <hr className="flex w-full border-t mt-8 border-gray-300" />
                 </td>
               </tr>
             </tbody>
@@ -161,7 +161,7 @@ const GeneratePDF = () => {
             <p>Valid until: {validUntilDate}</p>
           </div>
 
-          <div className="mt-20 px-28 py-6 mb-10 text-start bg-zinc-800 rounded-full text-gray-300">
+          <div className="mt-20 px-28 py-6 text-start bg-zinc-800 rounded-full text-gray-300">
             <p className="text-sm font-semibold">Terms and Conditions:</p>
             <p className="text-sm">
               We are happy to supply any furthur infromation you may need and

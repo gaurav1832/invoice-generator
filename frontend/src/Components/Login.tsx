@@ -1,18 +1,11 @@
 import React, { useContext, useState } from "react";
 
-// const API_BASE_URL =
-//   process.env.PROD_API_BASE_URL ||
-//   "https://react-file-manager-y92g.onrender.com";
-
-const API_BASE_URL = "http://localhost:5000"
-
+const API_BASE_URL = "https://invoice-generator-server-rv88.onrender.com";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState({ email: "", password: "" });
-
-
 
   const handleValidation = () => {
     let isValid = true;
@@ -20,7 +13,10 @@ const Login = () => {
     // Email validation using regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setError((prevError) => ({ ...prevError, email: "Please enter a valid email address." }));
+      setError((prevError) => ({
+        ...prevError,
+        email: "Please enter a valid email address.",
+      }));
       isValid = false;
     } else {
       setError((prevError) => ({ ...prevError, email: "" }));
@@ -28,7 +24,10 @@ const Login = () => {
 
     // Check if password is not empty
     if (password.trim() === "") {
-      setError((prevError) => ({ ...prevError, password: "Password is required." }));
+      setError((prevError) => ({
+        ...prevError,
+        password: "Password is required.",
+      }));
       isValid = false;
     } else {
       setError((prevError) => ({ ...prevError, password: "" }));
@@ -36,7 +35,6 @@ const Login = () => {
 
     return isValid;
   };
-
 
   const handleLogin = async (event) => {
     event.preventDefault();
@@ -68,7 +66,6 @@ const Login = () => {
     }
   };
 
-
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
     setError((prevError) => ({ ...prevError, email: "" }));
@@ -78,7 +75,6 @@ const Login = () => {
     setPassword(e.target.value);
     setError((prevError) => ({ ...prevError, password: "" }));
   };
-
 
   return (
     <div className="flex items-center justify-center mt-40">
@@ -122,7 +118,9 @@ const Login = () => {
               required
               className="mt-1 flex w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500"
             />
-            {error.password && <p className="text-red-500 mt-1">{error.password}</p>}
+            {error.password && (
+              <p className="text-red-500 mt-1">{error.password}</p>
+            )}
           </div>
           <button
             onClick={handleLogin}

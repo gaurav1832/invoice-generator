@@ -50,11 +50,11 @@ Welcome to the Invoice Generator App! This web application allows users to manag
     
 2. Configure environment variables:
   Create a .env file in the root of the backend directory with the following content:
-  ```bash
-    PORT=5000
-    MONGODB_URI=your-connection-uri
-    JWT_SECRET=your-secret-key
-  ```
+    ```bash
+      PORT=5000
+      MONGODB_URI=your-connection-uri
+      JWT_SECRET=your-secret-key
+    ```
 
 3. Start the backend server:
 

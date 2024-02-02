@@ -1,4 +1,4 @@
-const Product = require("../models/product"); // make sure to create this model
+const Product = require("../models/Product"); // make sure to create this model
 
 // Controller to add a product
 const addProduct = async (req, res) => {

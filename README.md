@@ -13,7 +13,11 @@ Welcome to the Invoice Generator App! This web application allows users to manag
 
 ## Features
 
-...
+- **User Authentication:** Users can register, log in, and log out securely.
+- **Product Addition:** Add the products for invoicing.
+- **Invoice Generation:** Create professional invoices with a breakdown of products and totals.
+- **PDF Export:** Export invoices to PDF for easy sharing and printing.
+
 
 ## Installation
 
@@ -56,10 +60,18 @@ Welcome to the Invoice Generator App! This web application allows users to manag
 
    ```bash
      npm start
+    ```
 
 
+## Technologies Used:
+React.js
+Node.js
+Express.js
+TypeScript
+MongoDB
+Axios
+Tailwind Css
 
-  
 
 
    
